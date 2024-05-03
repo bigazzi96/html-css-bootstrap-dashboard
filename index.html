@@ -16,23 +16,36 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <nav>
-
-    </nav>   
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Navbar</a>
+          <form class="d-flex w-75">
+            <input class="form-control me-2" type="search" placeholder="Prova a cercare: lezioni di Laravalev" aria-label="Search">
+            <div class="icone-navbar">
+                <i class="fa-solid fa-list d_none"></i>
+                <i class="fa-solid fa-circle-question"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-solid fa-bell bell"></i>
+            </div>
+          </form>
+        </div>
+      </nav>
     <main>               
-        <div class="sidebar">
-            <div class="top_sidebar">
-                <section>                  
-                    <ul>
-                        <li><a href="#"><i class="fa-solid fa-house" style="color:;"></i><span>Home</span></a></li>
-                        <li><a href="#"><i class="fa-solid fa-chart-simple" style="color: ;"></i><span>  Stats</span></a></li>
-                        <li><a href="#"><i class="fa-sharp fa-solid fa-signal" style="color: "></i><span>Signals</span></a></li>
-                    </ul>
-            </div>   
-        </div>         
+        <section class="sidebar"> 
+            <div>               
+                <ul>
+                    <li>><i class="fa-solid fa-house" style="color:;"></i><span>Home</span></li>
+                    <li><i class="fa-solid fa-chart-simple" style="color: ;"></i><span>  Stats</span></li>
+                    <li><i class="fa-sharp fa-solid fa-signal" style="color: "></i><span>Signals</span></li>
+                </ul>
+            </div>        
+            <div>
+                <i class="fa-solid fa-gear" style="color: #1a0000;"></i>
+            </div>               
+        </section>  
                 
-    
         <section class="content ">
+
             <section class="top">
                 <div class="container-fluid content-blue">
                     <div class="row">
@@ -52,8 +65,7 @@
                             <div class="col-md-3">
                                 <span class="text-white">Studenti online negli ultimi 30 minuti</span>
                                 <h2 class="text-white">125</h2>    
-                            </div>
-                            <div class="col-md-3 ">    
+                            </div>   
                             <div>
                                 <span class="text-white">Nuovo Studente</span>
                             </div>
