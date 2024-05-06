@@ -1,18 +1,70 @@
 body{
-        font-family: "Roboto", sans-serif;
-       
+    font-family: "Roboto", sans-serif;
+   
 }
 
-side{
-    background-color: #051e34;
-    color:#fefefe;
-}
 .content-blue{
-    background-color: #1b72e8;
-    color: #fefefe;
+background-color: #1b72e8;
+color: #fefefe;
 }
 li{
-    list-style: none;
+list-style: none;
 }
 
+.sidebar {
+width: 100px;
+background-image: url("../img/sidebar-bg.png");
+background-color: #051e34;
+color: white;
+}
+.sidebar li{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+   margin-top: 1rem;
+}
+
+#logo-piccolo{
+    width: 80px;
+    height: 40px;
+    display: none;
+}
+#logo-grande{
+    width: 55px;
+    height: 50px;
+}
+
+div.img{
+    max-width: 100%;
+}
+
+.content {
+width: calc(100vw - 100px);
+overflow: scroll;
+height: calc(100vh - 64px);
+}
+.content {
+    width: calc(100vw - 60px);
+}
+
+.avatar-lista{
+    width:20px
+}
+
+.icona{
+    background-color:#165bba
+}
+
+.logo{
+    height: 35px;
+}
+
+.mobile_logo{
+    display: none;
+}
+
+@media (max-width: 550px) {
+.sidebar {
+    width: 60px;
+}
 

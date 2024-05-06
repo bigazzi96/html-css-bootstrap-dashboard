@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    
-   
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Dashboard</title>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand">Navbar</a>
           <form class="d-flex w-75">
-            <input class="form-control me-2" type="search" placeholder="Prova a cercare: lezioni di Laravalev" aria-label="Search">
+            <div class="img">
+                <img src="./img/logo.svg" alt="logo"  id="logo-piccolo" d-md-block d-lg-none>
+                
+                <img src="img/mobile-logo.png"  alt="logo" id="logo-grande" >
+            </div>
+            <input class="form-control mb-3" type="search" placeholder="Prova a cercare: lezioni di Laravalev" aria-label="Search">
             <div class="icone-navbar">
                 <i class="fa-solid fa-list d_none"></i>
                 <i class="fa-solid fa-circle-question"></i>
@@ -30,17 +28,17 @@
           </form>
         </div>
       </nav>
-    <main>               
-        <section class="sidebar"> 
-            <div>               
+    <main class="d-flex">               
+        <section class="sidebar "> 
+            <div d-flex flex-column justify-content-between align-items-center>               
                 <ul>
-                    <li>><i class="fa-solid fa-house" style="color:;"></i><span>Home</span></li>
-                    <li><i class="fa-solid fa-chart-simple" style="color: ;"></i><span>  Stats</span></li>
-                    <li><i class="fa-sharp fa-solid fa-signal" style="color: "></i><span>Signals</span></li>
+                    <li><i class="fa-solid fa-house" style="color: #ffffff;"></i><span class="d-none d-xl-block">Home </span></li>
+                    <li><i class="fa-solid fa-chart-simple" style="color: #ffffff;"></i><span class="d-none d-xl-block">  Stats</span></li>
+                    <li><i class="fa-sharp fa-solid fa-signal" style="color: #ffffff;"></i><span class="d-none d-xl-block">Signals</span></li>
                 </ul>
             </div>        
             <div>
-                <i class="fa-solid fa-gear" style="color: #1a0000;"></i>
+                <i class="fa-solid fa-gear" style="color: #ffffff; d-none d-xl-block">Admin</i>
             </div>               
         </section>  
                 
@@ -48,7 +46,7 @@
 
             <section class="top">
                 <div class="container-fluid content-blue">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-md-6">
                             <div>
                                 <h1 class="">Boolean</h1>
@@ -56,24 +54,106 @@
                             </div>
                             <div>
                                 <span class="">3 app</span>
-                                <span class="">Boolean mobile app</span>
-                                <span class="">Boolean web app</span>
-                                <span class="">Boolean blog app</span>
-                                <span class="">+</span>                                    
+                                <i class="fa-solid fa-angles-right" style="color: #ffffff;"></i>
+                                <span class="badge rounded-pill text-bg-success icona inline-block dn_badge d-none .d-lg-block d-xl-none">Boolean mobile app</span>
+                                <span class="badge rounded-pill">Boolean web app</span>
+                                <span class="badge rounded-pill">Boolean blog app</span>
+                                <span class="badge rounded-pill">+</span>                                    
                             </div> 
                         </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 mt_1rem">
                                 <span class="text-white">Studenti online negli ultimi 30 minuti</span>
                                 <h2 class="text-white">125</h2>    
                             </div>   
                             <div>
-                                <span class="text-white">Nuovo Studente</span>
+                                <span class="text-white mt_1rem">Nuovo Studente</span>
                             </div>
                         </div> 
                     </div>
                 </div>
             </section>
+
+
+            <!--Canvas-->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="row ">
+                      <div class="col-md-6">
+                        <label for="i" class="form-label">Nome</label>
+                        <input type="name" class="form-control" id="inputName4">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputLastname4" class="form-label">Cognome</label>
+                        <input type="lastname" class="form-control" id="inputLastname4">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <div class="input-group">
+                          <div class="input-group-text">@</div>
+                          <input type="text" class="form-control" id="inlineFormInputGroupUsername">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Indirizzo Email</label>
+                        <div class="input-group">
+                          <div class="input-group-text">@</div>
+                          <input type="text" class="form-control" id="inlineFormInputGroupUsername2">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword5">
+                      </div>
+                      <div class="col-12">
+                        <label for="inputAddress" class="form-label">Indirizzo</label>
+                        <input type="text" class="form-control" id="inputAddress">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Città</label>
+                        <input type="text" class="form-control" id="inputCity">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="inputState" class="form-label">Stato</label>
+                        <select id="inputState" class="form-select">
+                          <option selected>Scegli...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="inputZip" class="form-label">Cap</label>
+                        <input type="text" class="form-control" id="inputZip">
+                      </div>
+                      <div class="mb-3">
+                        <label for="formFile" class="form-label">Foto</label>
+                        <input class="form-control" type="file" id="formFile">
+                      </div>
+                      <div class="col-12">
+                        <div>
+                          <input class="form-check-input" type="checkbox" id="gridCheck">
+                          <label class="form-check-label" for="gridCheck">
+                            Seleziona per proseguire
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Salva</button>
+                        <button type="submit" class="btn btn-warning">Svuota</button>
+                      </div>
+                    </form>
+                </div>
+                </div>
+
+
             <section>
+                
                 <section class="Prossimi-classi">
                     <div>
                         <div class="row">
@@ -91,71 +171,72 @@
                                     </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row"> <img src="" alt="avatar">classe 75</th>
+        
+                                        <th scope="row"> <img src="img/class-avatar.jpg" alt="avatar" width="30px">classe 75</th>
                                         <td>15 Febbraio 2021</td>
                                         <td>20%</td>
-                                        <td>Done</td>
+                                        <td class="badge text-bg-success bg-success">Done</td>
                                         <td><i class="fa-solid fa-pen icon_border" style="color: #6c757d;"></i><i class="fa-solid fa-trash icon_border" style="color: #6c757d;"></i></td>                                    
                                     </tr>
 
                                     <tr>
-                                        <th scope="row"> <img src="" alt="avatar">classe 76</th>
+                                        <th scope="row"> <img src="img/class-avatar.jpg" alt="avatar" width="30px">classe 76</th>
                                         <td>16 Febbraio 2021</td>
                                         <td>20%</td>
-                                        <td>Done</td>
+                                        <td class="badge text-bg-success bg-success">Done</td>
                                         <td><i class="fa-solid fa-pen icon_border" style="color:#6c757d;"></i><i class="fa-solid fa-trash icon_border" style="color: #6c757d;"></i></td>                                    
                                     </tr>
                                       
                                     <tr> 
-                                        <th scope="row"> <img src="" alt="avatar">classe 77</th>
+                                        <th scope="row"> <img src="img/class-avatar.jpg" alt="avatar" width="30px" >classe 77</th>
                                         <td>17 Febbraio 2021</td>
                                         <td>20%</td>
-                                        <td>Process</td>
+                                        <td span class="badge text-bg-warning bg-warning">Process</td>
                                         <td><i class="fa-solid fa-pen icon_border" style="color: #6c757d;"></i><i class="fa-solid fa-trash icon_border" style="color:#6c757d;"></i></td>                                    
                                     </tr>
 
                                     <tr>
-                                        <th scope="row"> <img src="" alt="avatar">classe 78</th>
+                                        <th scope="row"> <img src="img/class-avatar.jpg" alt="avatar" width="30px">classe 78</th>
                                         <td>18 Febbraio 2021</td>
                                         <td>20%</td>
-                                        <td>Done</td>
+                                        <td class="badge text-bg-success bg-success">Done</td>
                                         <td><i class="fa-solid fa-pen icon_border" style="color:#6c757d;"></i><i class="fa-solid fa-trash icon_border" style="color: #6c757d;"></i></td>                                    
                                 </tr>
 
                                     <tr>
-                                        <th scope="row"> <img src="" alt="avatar">classe 79</th>
+                                        <th scope="row"> <img src="img/class-avatar.jpg" alt="avatar" width="30px">classe 79</th>
                                         <td>19 Febbraio 2021</td>
                                         <td>20%</td>
-                                        <td>Failed</td>
+                                        <td span class="badge text-bg-danger bg-danger">Failed</td>
                                         <td><i class="fa-solid fa-pen icon_border" style="color: #6c757d"></i><i class="fa-solid fa-trash icon_border" style="color: #6c757d;"></i></td>                                    
                                     </tr>
 
                                     <tr>
-                                        <th scope="row"> <img src="" alt="avatar">classe 80</th>
+                                        <th scope="row"> <img src="img/class-avatar.jpg" alt="avatar" width="30px">classe 80</th>
                                         <td>20Febbraio 2021</td>
                                         <td>20%</td>
-                                        <td>Done</td>
+                                        <td class="badge text-bg-success bg-success">Done</td>
                                         <td><i class="fa-solid fa-pen icon_border" style="color: #6c757d;"></i><i class="fa-solid fa-trash icon_border" style="color: #6c757d;"></i></td>                                    
                                     </tr>
                                     <tr>
-                                        <th scope="row"> <img src="" alt="avatar">classe 81</th>
+                                        <th scope="row"> <img src="img/class-avatar.jpg" alt="avatar" width="30px">classe 81</th>
                                         <td>21Febbraio 2021</td>
                                         <td>20%</td>
-                                        <td>Failed</td>
+                                        <td span class="badge text-bg-danger bg-danger">Failed</td>
                                         <td><i class="fa-solid fa-pen icon_border" style="color: #6c757d;"></i><i class="fa-solid fa-trash icon_border" style="color: #6c757d;"></i></td>                                    
                                     </tr>
                                     <tr>
-                                        <th scope="row"> <img src="" alt="avatar">classe 82</th>
+                                        <th scope="row"> <img src="img/class-avatar.jpg" class="avatar-lista" alt="avatar" width="30px">classe 82</th>
                                         <td>22Febbraio 2021</td>
                                         <td>20%</td>
-                                        <td>Done</td>
+                                        <td class="badge text-bg-success bg-success">Done</td>
                                         <td><i class="fa-solid fa-pen icon_border" style="color: #6c757d;"></i><i class="fa-solid fa-trash icon_border" style="color: #6c757d;"></i></td>                                    
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                    </div>
+                    
                 </section>
 
        
@@ -200,6 +281,10 @@
                   </div>
             </section>
 
+            
+
+            
+
 
              <section class="todo">
                 <ulclass="list-group">
@@ -224,7 +309,7 @@
             <section>
                 <ul class="list-group">
                     <li class="list-group">
-                      <img src="" alt="stats" class="stats">
+                      <img src="img/stats.jpeg" alt="stats" class="stats" width="50%">
                       <h5>Utenti Attivi</h5>
                       <span>Lista degli utenti attivi in piattaforma nell'ultimo mese</span>
                     </li>
@@ -241,7 +326,7 @@
                       <span>Visualizza report approfondito</span>
                   </ul>
            
-   
+                
 
 
 
